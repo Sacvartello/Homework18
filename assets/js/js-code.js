@@ -1,11 +1,7 @@
 //1
 const str = 'Qwerty'
-const arrFromStr = str.split('')
-let newStr = ''
-for(i=arrFromStr.length-1; i >= 0; i--){
-    newStr = newStr + arrFromStr[i]
-}
-console.log(newStr);
+const newStr = str.split('').reverse().join('')
+console.log(newStr)
 //2
 function f1(num){
     return Math.round(num)
@@ -15,19 +11,19 @@ const returnOfF1 = f1(3.296)
 console.log(returnOfF1);
 //3
 const userName = prompt('Write your name:')
-console.log('name -->', userName.toLocaleUpperCase());
+console.log('name -->', userName.toUpperCase());
 //4
 function f2 (date){
     let arrFromDate = date.split('-')
-    const newDate = arrFromDate[1].concat(`.${arrFromDate[2]}.${arrFromDate[0]}`)
+    const newDate = arrFromDate.reverse().join('.')
     return newDate
 }
-const returnOfF2 = f2('2021-22-09')
+const returnOfF2 = f2('2021-09-22')
 console.log(returnOfF2);
 //5
 function f3 (firstString, secondString){
-    const newFirstString = firstString.toLocaleLowerCase()
-    const newSecondString= secondString.toLocaleLowerCase()
+    const newFirstString = firstString.toLowerCase()
+    const newSecondString= secondString.toLowerCase()
     const isEqual = newFirstString===newSecondString
     return isEqual
 }
